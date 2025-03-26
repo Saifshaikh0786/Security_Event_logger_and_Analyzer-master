@@ -3,6 +3,12 @@ from flask_cors import CORS
 import requests
 import json
 import logging
+from flask import Flask
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)
+
 
 app = Flask(__name__)
 CORS(app)

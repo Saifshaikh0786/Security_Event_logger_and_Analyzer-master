@@ -338,12 +338,13 @@ const App = () => {
 
       const response = await axios.post(
         'http://127.0.0.1:5143/api/chat',
+        
         {
           input_text: chatInput,
           params: { api_model: 'o3-mini', event_details: selectedLog },
           prev_messages: prevMessages.map((msg) => JSON.stringify(msg)),
         },
-        { timeout: 15000, responseEncoding: 'utf8' }
+        { timeout: 30000, responseEncoding: 'utf8' }
       );
 
       const responseData = response.data;
